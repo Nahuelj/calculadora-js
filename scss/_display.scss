@@ -1,13 +1,30 @@
-.display {
-    height: 8rem;
-    width: 320px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: bold;
-    background-color: rgba(128, 128, 128, 0.322);
-    padding: 0.5rem 0.5rem;
+.contenedor-display{
+    width:100%;
+    height: 150px;
+    margin-bottom: 10px;
+    background-color: grey;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    
+}
+.display-mayor{
+    margin-right: 20px;
+    color: white;
+    font-size: 3rem;
+    width: 100%;
+    height: 5rem;
+}
+
+
+.display {
+    color: white;
+    width: 95%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    overflow:hidden;
 }

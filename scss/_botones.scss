@@ -1,10 +1,12 @@
 .contenedor-botones {
-    height: 400px;
+    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 10px;
 
     button {
+        width: 60px;
+        
         border: 1px solid transparent;
         border-radius: 10px;
         font-size: 1.5rem;
@@ -18,19 +20,23 @@
         &:hover {
             border: 1px solid rgba(0, 0, 0, 0.231);
             transform: scale(1.1);
-            transition: all 0.2s;
+            opacity: 0.8;
+            transition: transform 0.2s;
         }
     }
-
     .btn {
-        background-color: #b9f3e4;
+        background-color: #C92C6D;
+        height: 60px;
     }
 
     .btn-number {
-        background-color: #ffaacf;
+        background-color: #609EA2;
+        height: 60px;
+
     }
 
     .btn-2fr {
+        background-color: #F0EEED;
         grid-column: 4/5;
         grid-row: 4/6;
     }

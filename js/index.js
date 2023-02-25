@@ -1,10 +1,12 @@
 const screen = document.querySelector("#screen");
 const buttons = document.querySelectorAll("button");
+const screenResultado = document.querySelector("#resultado");
 
 buttons.forEach((item) => {
   item.onclick = () => {
     if (item.id == "clean") {
       screen.innerText = "";
+      screenResultado.innerText = "";
     } else if (item.id == "division") {
       screen.innerText += "/";
     } else if (item.id == "multiplicacion") {
@@ -19,10 +21,14 @@ buttons.forEach((item) => {
     } else if (item.id == "igual" && screen.innerText != "") {
       try {
         let resultado = screen.innerText.toString();
-        screen.innerText = eval(resultado);
+        screenResultado.innerText = eval(resultado);
+        if (eval(resultado)== undefined){
+          screenResultado.innerText = "Sintax Error";
+          setTimeout(() => (screenResultado.innerText = ""), 500);
+        }
       } catch (error) {
-        screen.innerText = "Sintax Error";
-        setTimeout(() => (screen.innerText = ""), 500);
+        screenResultado.innerText = "Sintax Error";
+        setTimeout(() => (screenResultado.innerText = ""), 500);
       }
     } else if (item.id != "igual") {
       screen.innerText += item.id;
