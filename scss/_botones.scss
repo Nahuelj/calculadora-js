@@ -1,0 +1,37 @@
+.contenedor-botones {
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    button {
+        border: 1px solid transparent;
+        border-radius: 10px;
+        font-size: 1.5rem;
+
+        .flecha {
+            z-index: 100;
+            width: 30px;
+            height: 40px;
+        }
+
+        &:hover {
+            border: 1px solid rgba(0, 0, 0, 0.231);
+            transform: scale(1.1);
+            transition: all 0.2s;
+        }
+    }
+
+    .btn {
+        background-color: #b9f3e4;
+    }
+
+    .btn-number {
+        background-color: #ffaacf;
+    }
+
+    .btn-2fr {
+        grid-column: 4/5;
+        grid-row: 4/6;
+    }
+}
